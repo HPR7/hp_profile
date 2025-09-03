@@ -64,6 +64,27 @@ interface Translations {
     title: string;
     certifications: string;
     aiCertification: string;
+    specializedTraining: string;
+    degrees: {
+      mba: string;
+      bachelor: string;
+      diploma: string;
+    };
+    institutions: {
+      centrum: string;
+      trujillo: string;
+      ipae: string;
+      innovaPucp: string;
+    };
+    fields: {
+      businessAdmin: string;
+      industrialEng: string;
+      insurance: string;
+    };
+    trainings: {
+      emergencyManagement: string;
+      riskManagement: string;
+    };
   };
   
   // Contact Section
@@ -164,7 +185,28 @@ const translations: Record<Language, Translations> = {
     education: {
       title: "Education & Qualifications",
       certifications: "Professional Certifications",
-      aiCertification: "AI Agents for Productivity Enhancement"
+      aiCertification: "AI Agents for Productivity Enhancement",
+      specializedTraining: "Specialized Training",
+      degrees: {
+        mba: "Master of Business Administration (M.B.A.)",
+        bachelor: "Bachelor's Degree",
+        diploma: "Insurance Specialist Diploma"
+      },
+      institutions: {
+        centrum: "CENTRUM Graduate Business School",
+        trujillo: "Universidad Nacional de Trujillo",
+        ipae: "Instituto Peruano de Administración de Empresas – IPAE",
+        innovaPucp: "INNOVA PUCP"
+      },
+      fields: {
+        businessAdmin: "Business Administration and Management, General",
+        industrialEng: "Industrial Engineering",
+        insurance: "Insurance Specialization"
+      },
+      trainings: {
+        emergencyManagement: "Emergency, Crisis and Business Continuity Management",
+        riskManagement: "Risk Management and Insurance in Safety and Health"
+      }
     },
     contact: {
       title: "Get In Touch",
@@ -259,7 +301,28 @@ const translations: Record<Language, Translations> = {
     education: {
       title: "Educación y Calificaciones",
       certifications: "Certificaciones Profesionales",
-      aiCertification: "Agentes de IA para Incrementar la Productividad"
+      aiCertification: "Agentes de IA para Incrementar la Productividad",
+      specializedTraining: "Formación Especializada",
+      degrees: {
+        mba: "Maestría en Administración de Empresas (M.B.A.)",
+        bachelor: "Licenciatura",
+        diploma: "Diploma de Especialista en Seguros"
+      },
+      institutions: {
+        centrum: "CENTRUM Graduate Business School",
+        trujillo: "Universidad Nacional de Trujillo",
+        ipae: "Instituto Peruano de Administración de Empresas – IPAE",
+        innovaPucp: "INNOVA PUCP"
+      },
+      fields: {
+        businessAdmin: "Administración de Empresas y Gestión, General",
+        industrialEng: "Ingeniería Industrial",
+        insurance: "Especialización en Seguros"
+      },
+      trainings: {
+        emergencyManagement: "Gestión de Emergencias, Crisis y Continuidad del Negocio",
+        riskManagement: "Gestión de Riesgos y Seguros en Seguridad y Salud"
+      }
     },
     contact: {
       title: "Ponte en Contacto",

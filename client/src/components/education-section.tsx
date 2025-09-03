@@ -6,25 +6,25 @@ export default function EducationSection() {
   
   const education = [
     {
-      degree: "Master of Business Administration (M.B.A.)",
-      institution: "CENTRUM Graduate Business School",
-      field: "Business Administration and Management, General",
+      degree: t.education.degrees.mba,
+      institution: t.education.institutions.centrum,
+      field: t.education.fields.businessAdmin,
       period: "2008 - 2010",
       icon: GraduationCap,
       color: "bg-primary"
     },
     {
-      degree: "Bachelor's Degree",
-      institution: "Universidad Nacional de Trujillo",
-      field: "Industrial Engineering",
+      degree: t.education.degrees.bachelor,
+      institution: t.education.institutions.trujillo,
+      field: t.education.fields.industrialEng,
       period: "1992 - 1997",
       icon: Cog,
       color: "bg-secondary"
     },
     {
-      degree: "Diploma de Especialista en Seguros",
-      institution: "Instituto Peruano de Administración de Empresas – IPAE",
-      field: "Especialización en Seguros",
+      degree: t.education.degrees.diploma,
+      institution: t.education.institutions.ipae,
+      field: t.education.fields.insurance,
       period: "2004 - 2005",
       icon: Shield,
       color: "bg-accent"
@@ -33,15 +33,15 @@ export default function EducationSection() {
 
   const specializedTraining = [
     {
-      title: "Gestión de Emergencias, Crisis y Continuidad del Negocio",
-      institution: "INNOVA PUCP",
+      title: t.education.trainings.emergencyManagement,
+      institution: t.education.institutions.innovaPucp,
       duration: "60 Horas",
       year: "2018",
       icon: Award
     },
     {
-      title: "Gestión de Riesgos y Seguros en Seguridad y Salud",
-      institution: "INNOVA PUCP",
+      title: t.education.trainings.riskManagement,
+      institution: t.education.institutions.innovaPucp,
       duration: "160 Horas",
       year: "2016",
       icon: Shield
@@ -91,7 +91,7 @@ export default function EducationSection() {
           
           <div className="mt-12">
             <h3 className="text-2xl font-bold text-center mb-8 text-foreground" data-testid="specialized-training-title">
-              Formación Especializada
+              {t.education.specializedTraining}
             </h3>
             <div className="grid md:grid-cols-2 gap-6 mb-12">
               {specializedTraining.map((training, index) => {
