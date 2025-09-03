@@ -14,22 +14,9 @@ export default function ExperienceSection() {
     },
     {
       company: "San Miguel Industrias PET S.A.",
-      totalDuration: "5 years 2 months",
-      positions: [
-        {
-          title: "Deputy Manager of Safety and Health Occupational",
-          duration: "Mar 2017 - Jun 2019",
-          location: "Peru, Colombia, Ecuador, El Salvador, Mexico, Panama, Guatemala, Argentina, Chile",
-          totalTime: "2 years 4 months"
-        },
-        {
-          title: "Head of Safety and Health Occupational",
-          duration: "May 2014 - Feb 2017",
-          location: "Peru, Colombia, Ecuador, El Salvador, Mexico",
-          totalTime: "2 years 10 months"
-        }
-      ],
-      type: "multiple"
+      position: "Deputy Manager of Safety and Health Occupational",
+      location: "Peru, Colombia, Ecuador, El Salvador, Mexico, Panama, Guatemala, Argentina, Chile",
+      type: "single"
     },
     {
       company: "San Fernando",
