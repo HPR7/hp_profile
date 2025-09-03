@@ -12,7 +12,7 @@ export default function AboutSection() {
             {t.about.title}
           </h2>
           
-          <div className="space-y-12">
+          <div className="space-y-8">
             {/* Primera fila: Core Expertise */}
             <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
               <h3 className="text-xl font-semibold text-primary mb-4">
@@ -24,37 +24,37 @@ export default function AboutSection() {
               </p>
             </div>
             
-            {/* Segunda fila: Los otros tres elementos */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-                <h3 className="text-xl font-semibold text-primary mb-4">
-                  <Award className="mr-2 inline" size={20} />
-                  {t.about.managementSystems.title}
-                </h3>
-                <p className="text-card-foreground leading-relaxed" data-testid="text-management-systems">
-                  {t.about.managementSystems.description}
-                </p>
-              </div>
-              
-              <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-                <h3 className="text-xl font-semibold text-primary mb-4">
-                  <Users className="mr-2 inline" size={20} />
-                  {t.about.leadershipStyle.title}
-                </h3>
-                <p className="text-card-foreground leading-relaxed" data-testid="text-leadership-style">
-                  {t.about.leadershipStyle.description}
-                </p>
-              </div>
-              
-              <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-                <h3 className="text-xl font-semibold text-primary mb-4">
-                  <Leaf className="mr-2 inline" size={20} />
-                  {t.about.environmentalFocus.title}
-                </h3>
-                <p className="text-card-foreground leading-relaxed" data-testid="text-environmental-focus">
-                  {t.about.environmentalFocus.description}
-                </p>
-              </div>
+            {/* Segunda fila: Management Systems */}
+            <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
+              <h3 className="text-xl font-semibold text-primary mb-4">
+                <Award className="mr-2 inline" size={20} />
+                {t.about.managementSystems.title}
+              </h3>
+              <p className="text-card-foreground leading-relaxed" data-testid="text-management-systems">
+                {t.about.managementSystems.description}
+              </p>
+            </div>
+            
+            {/* Tercera fila: Leadership Style */}
+            <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
+              <h3 className="text-xl font-semibold text-primary mb-4">
+                <Users className="mr-2 inline" size={20} />
+                {t.about.leadershipStyle.title}
+              </h3>
+              <p className="text-card-foreground leading-relaxed" data-testid="text-leadership-style">
+                {t.about.leadershipStyle.description}
+              </p>
+            </div>
+            
+            {/* Cuarta fila: Environmental Focus */}
+            <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
+              <h3 className="text-xl font-semibold text-primary mb-4">
+                <Leaf className="mr-2 inline" size={20} />
+                {t.about.environmentalFocus.title}
+              </h3>
+              <p className="text-card-foreground leading-relaxed" data-testid="text-environmental-focus">
+                {t.about.environmentalFocus.description}
+              </p>
             </div>
           </div>
         </div>
