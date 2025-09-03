@@ -230,7 +230,7 @@ const translations: Record<Language, Translations> = {
     },
     footer: {
       title: "Expert in Safety, Health & Environment Management",
-      copyright: "© 2024 Hector Parraga. Professional Resume & Portfolio."
+      copyright: "© 2025 Hector Parraga. Professional Resume & Portfolio."
     }
   },
   es: {
@@ -348,7 +348,7 @@ const translations: Record<Language, Translations> = {
     },
     footer: {
       title: "Experto en Gestión de Seguridad, Salud y Medio Ambiente",
-      copyright: "© 2024 Hector Parraga. Currículum y Portafolio Profesional."
+      copyright: "© 2025 Hector Parraga. Currículum y Portafolio Profesional."
     }
   }
 };
