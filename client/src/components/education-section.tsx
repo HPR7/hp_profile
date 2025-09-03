@@ -23,7 +23,7 @@ export default function EducationSection() {
     },
     {
       degree: "Diploma de Especialista en Seguros",
-      institution: "INSTITUTO PERUANO DE ADMINISTRACION DE EMPRESAS – IPAE",
+      institution: "Instituto Peruano de Administración de Empresas – IPAE",
       field: "Especialización en Seguros",
       period: "2004 - 2005",
       icon: Shield,
