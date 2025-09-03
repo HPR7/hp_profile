@@ -7,39 +7,43 @@ export default function ExperienceSection() {
     {
       company: "Medifarma",
       position: "Deputy Manager of Environment, Health and Safety",
-      duration: "Sep 2019 - Apr 2023",
       location: "Lima Province, Peru",
-      totalDuration: "3 years 8 months",
+      startYear: "2019",
       type: "single"
     },
     {
       company: "San Miguel Industrias PET S.A.",
       position: "Deputy Manager of Safety and Health Occupational",
       location: "Peru, Colombia, Ecuador, El Salvador, Mexico, Panama, Guatemala, Argentina, Chile",
+      startYear: "2017",
       type: "single"
     },
     {
       company: "San Fernando",
       position: "Head of Safety and Health at Work",
       location: "Lima Province, Peru",
+      startYear: "2012",
       type: "single"
     },
     {
       company: "Backus",
       position: "Industrial Safety Supervisor",
       location: "Lima Province, Peru",
+      startYear: "2010",
       type: "single"
     },
     {
       company: "Compañía Nacional de Chocolates de Peru SA",
       position: "Head of Industrial Safety",
       location: "Lima Province, Peru",
+      startYear: "2007",
       type: "single"
     },
     {
       company: "MAPFRE PERÚ",
       position: "Safety Engineer",
       location: "Lima Province, Peru",
+      startYear: "2006",
       type: "single",
       isEarly: true
     },
@@ -47,6 +51,7 @@ export default function ExperienceSection() {
       company: "Rimac Internacional S.A. EPS",
       position: "Safety Engineer",
       location: "Lima Province, Peru",
+      startYear: "2001",
       type: "single",
       isEarly: true
     }
@@ -71,13 +76,18 @@ export default function ExperienceSection() {
                   <div className="bg-card rounded-xl p-8 shadow-lg print-friendly hover:shadow-xl transition-shadow" data-testid={`experience-card-${index}`}>
                     {exp.type === "single" ? (
                       <div>
-                        <div className="mb-4">
-                          <h3 className="text-xl font-bold text-card-foreground" data-testid={`exp-position-${index}`}>
-                            {exp.position}
-                          </h3>
-                          <h4 className="text-lg font-semibold text-primary" data-testid={`exp-company-${index}`}>
-                            {exp.company}
-                          </h4>
+                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                          <div>
+                            <h3 className="text-xl font-bold text-card-foreground" data-testid={`exp-position-${index}`}>
+                              {exp.position}
+                            </h3>
+                            <h4 className="text-lg font-semibold text-primary" data-testid={`exp-company-${index}`}>
+                              {exp.company}
+                            </h4>
+                          </div>
+                          <span className="text-muted-foreground font-medium mt-2 lg:mt-0" data-testid={`exp-start-year-${index}`}>
+                            {exp.startYear}
+                          </span>
                         </div>
                         {exp.location && (
                           <p className="text-muted-foreground" data-testid={`exp-location-${index}`}>
