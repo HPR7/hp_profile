@@ -55,6 +55,14 @@ export default function ExperienceSection() {
       startYear: "2001",
       type: "single",
       isEarly: true
+    },
+    {
+      company: "COSAPI S.A. / Sandwell SSK S.A. / Sagitario S.A. / GyM S.A.",
+      position: "Safety Engineer",
+      location: "Lima Province, Peru",
+      startYear: "1998",
+      type: "single",
+      isEarly: true
     }
   ];
 
