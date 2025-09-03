@@ -21,38 +21,32 @@ export default function ExperienceSection() {
     {
       company: "San Fernando",
       position: "Head of Safety and Health at Work",
-      duration: "Dec 2012 - Apr 2014",
-      location: "Lima",
-      totalDuration: "1 year 5 months",
+      location: "Lima Province, Peru",
       type: "single"
     },
     {
       company: "Backus",
       position: "Industrial Safety Supervisor",
-      duration: "Jul 2010 - Dec 2012",
-      totalDuration: "2 years 6 months",
+      location: "Lima Province, Peru",
       type: "single"
     },
     {
       company: "Compañía Nacional de Chocolates de Peru SA",
       position: "Head of Industrial Safety",
-      duration: "May 2007 - Mar 2010",
-      totalDuration: "2 years 11 months",
+      location: "Lima Province, Peru",
       type: "single"
     },
     {
       company: "MAPFRE PERÚ",
       position: "Safety Engineer",
-      duration: "Jul 2006 - Apr 2007",
-      totalDuration: "10 months",
+      location: "Lima Province, Peru",
       type: "single",
       isEarly: true
     },
     {
       company: "Rimac Internacional S.A. EPS",
       position: "Safety Engineer",
-      duration: "Dec 2001 - Jun 2006",
-      totalDuration: "4 years 7 months",
+      location: "Lima Province, Peru",
       type: "single",
       isEarly: true
     }
@@ -91,28 +85,7 @@ export default function ExperienceSection() {
                           </p>
                         )}
                       </div>
-                    ) : (
-                      <div>
-                        <div className="mb-4">
-                          <h3 className="text-xl font-bold text-card-foreground" data-testid={`exp-company-${index}`}>
-                            {exp.company}
-                          </h3>
-                        </div>
-                        
-                        <div className="space-y-4">
-                          {exp.positions?.map((position, posIndex) => (
-                            <div key={posIndex} className="bg-muted/30 rounded-lg p-4">
-                              <h5 className="font-semibold text-card-foreground mb-2" data-testid={`exp-pos-title-${index}-${posIndex}`}>
-                                {position.title}
-                              </h5>
-                              <p className="text-sm text-muted-foreground">
-                                {position.location}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
+                    ) : null}
                   </div>
                 </div>
               ))}
