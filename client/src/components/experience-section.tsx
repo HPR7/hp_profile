@@ -90,60 +90,37 @@ export default function ExperienceSection() {
                   <div className="bg-card rounded-xl p-8 shadow-lg print-friendly hover:shadow-xl transition-shadow" data-testid={`experience-card-${index}`}>
                     {exp.type === "single" ? (
                       <div>
-                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                          <div>
-                            <h3 className="text-xl font-bold text-card-foreground" data-testid={`exp-position-${index}`}>
-                              {exp.position}
-                            </h3>
-                            <h4 className="text-lg font-semibold text-primary" data-testid={`exp-company-${index}`}>
-                              {exp.company}
-                            </h4>
-                          </div>
-                          <span className="text-muted-foreground font-medium mt-2 lg:mt-0" data-testid={`exp-duration-${index}`}>
-                            {exp.duration}
-                          </span>
+                        <div className="mb-4">
+                          <h3 className="text-xl font-bold text-card-foreground" data-testid={`exp-position-${index}`}>
+                            {exp.position}
+                          </h3>
+                          <h4 className="text-lg font-semibold text-primary" data-testid={`exp-company-${index}`}>
+                            {exp.company}
+                          </h4>
                         </div>
                         {exp.location && (
-                          <p className="text-muted-foreground mb-4" data-testid={`exp-location-${index}`}>
+                          <p className="text-muted-foreground" data-testid={`exp-location-${index}`}>
                             {exp.location}
                           </p>
                         )}
-                        <div className="bg-muted/50 rounded-lg p-4">
-                          <span className="text-sm font-medium text-accent-foreground">
-                            {t.experience.duration}: {exp.totalDuration}
-                          </span>
-                        </div>
                       </div>
                     ) : (
                       <div>
-                        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                          <div>
-                            <h3 className="text-xl font-bold text-card-foreground" data-testid={`exp-company-${index}`}>
-                              {exp.company}
-                            </h3>
-                          </div>
-                          <span className="text-muted-foreground font-medium mt-2 lg:mt-0">
-                            {t.experience.total}: {exp.totalDuration}
-                          </span>
+                        <div className="mb-4">
+                          <h3 className="text-xl font-bold text-card-foreground" data-testid={`exp-company-${index}`}>
+                            {exp.company}
+                          </h3>
                         </div>
                         
                         <div className="space-y-4">
                           {exp.positions?.map((position, posIndex) => (
                             <div key={posIndex} className="bg-muted/30 rounded-lg p-4">
-                              <div className="flex justify-between items-start mb-2">
-                                <h5 className="font-semibold text-card-foreground" data-testid={`exp-pos-title-${index}-${posIndex}`}>
-                                  {position.title}
-                                </h5>
-                                <span className="text-sm text-muted-foreground">
-                                  {position.duration}
-                                </span>
-                              </div>
-                              <p className="text-sm text-muted-foreground mb-2">
+                              <h5 className="font-semibold text-card-foreground mb-2" data-testid={`exp-pos-title-${index}-${posIndex}`}>
+                                {position.title}
+                              </h5>
+                              <p className="text-sm text-muted-foreground">
                                 {position.location}
                               </p>
-                              <span className="inline-block px-3 py-1 bg-accent text-accent-foreground text-xs rounded-full">
-                                {position.totalTime}
-                              </span>
                             </div>
                           ))}
                         </div>
