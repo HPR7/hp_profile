@@ -1,4 +1,4 @@
-import { GraduationCap, Cog, Bot } from "lucide-react";
+import { GraduationCap, Cog, Bot, Shield, Award } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function EducationSection() {
@@ -20,6 +20,31 @@ export default function EducationSection() {
       period: "1992 - 1997",
       icon: Cog,
       color: "bg-secondary"
+    },
+    {
+      degree: "Diploma de Especialista en Seguros",
+      institution: "INSTITUTO PERUANO DE ADMINISTRACION DE EMPRESAS – IPAE",
+      field: "Especialización en Seguros",
+      period: "2004 - 2005",
+      icon: Shield,
+      color: "bg-accent"
+    }
+  ];
+
+  const specializedTraining = [
+    {
+      title: "Gestión de Emergencias, Crisis y Continuidad del Negocio",
+      institution: "INNOVA PUCP",
+      duration: "60 Horas",
+      year: "2018",
+      icon: Award
+    },
+    {
+      title: "Gestión de Riesgos y Seguros en Seguridad y Salud",
+      institution: "INNOVA PUCP",
+      duration: "160 Horas",
+      year: "2016",
+      icon: Shield
     }
   ];
 
@@ -31,7 +56,7 @@ export default function EducationSection() {
             {t.education.title}
           </h2>
           
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
             {education.map((edu, index) => {
               const IconComponent = edu.icon;
               return (
@@ -65,6 +90,44 @@ export default function EducationSection() {
           </div>
           
           <div className="mt-12">
+            <h3 className="text-2xl font-bold text-center mb-8 text-foreground" data-testid="specialized-training-title">
+              Formación Especializada
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6 mb-12">
+              {specializedTraining.map((training, index) => {
+                const IconComponent = training.icon;
+                return (
+                  <div 
+                    key={index}
+                    className="bg-card rounded-xl p-6 shadow-lg print-friendly hover:shadow-xl transition-shadow"
+                    data-testid={`training-card-${index}`}
+                  >
+                    <div className="flex items-start mb-4">
+                      <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                        <IconComponent className="text-primary-foreground" size={20} />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-lg font-bold text-card-foreground mb-2" data-testid={`training-title-${index}`}>
+                          {training.title}
+                        </h4>
+                        <p className="text-primary font-semibold mb-1" data-testid={`training-institution-${index}`}>
+                          {training.institution}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          <span className="inline-block px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full">
+                            {training.duration}
+                          </span>
+                          <span className="inline-block px-3 py-1 bg-accent text-accent-foreground text-sm rounded-full">
+                            {training.year}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            
             <h3 className="text-2xl font-bold text-center mb-8 text-foreground" data-testid="certifications-title">
               {t.education.certifications}
             </h3>
