@@ -15,7 +15,7 @@ export default function ExperienceSection() {
       company: "San Miguel Industrias PET S.A.",
       position: "Deputy Manager of Safety and Health Occupational",
       location: "Peru, Colombia, Ecuador, El Salvador, Mexico, Panama, Guatemala, Argentina, Chile",
-      startYear: "2017",
+      startYear: "2014",
       type: "single"
     },
     {
