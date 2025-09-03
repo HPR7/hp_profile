@@ -12,18 +12,20 @@ export default function AboutSection() {
             {t.about.title}
           </h2>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-6">
-              <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-                <h3 className="text-xl font-semibold text-primary mb-4">
-                  <Shield className="mr-2 inline" size={20} />
-                  {t.about.coreExpertise.title}
-                </h3>
-                <p className="text-card-foreground leading-relaxed" data-testid="text-core-expertise">
-                  {t.about.coreExpertise.description}
-                </p>
-              </div>
-              
+          <div className="space-y-12">
+            {/* Primera fila: Core Expertise */}
+            <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
+              <h3 className="text-xl font-semibold text-primary mb-4">
+                <Shield className="mr-2 inline" size={20} />
+                {t.about.coreExpertise.title}
+              </h3>
+              <p className="text-card-foreground leading-relaxed" data-testid="text-core-expertise">
+                {t.about.coreExpertise.description}
+              </p>
+            </div>
+            
+            {/* Segunda fila: Los otros tres elementos */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
                 <h3 className="text-xl font-semibold text-primary mb-4">
                   <Award className="mr-2 inline" size={20} />
@@ -33,9 +35,7 @@ export default function AboutSection() {
                   {t.about.managementSystems.description}
                 </p>
               </div>
-            </div>
-            
-            <div className="space-y-6">
+              
               <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
                 <h3 className="text-xl font-semibold text-primary mb-4">
                   <Users className="mr-2 inline" size={20} />
