@@ -75,6 +75,7 @@ interface Translations {
       trujillo: string;
       ipae: string;
       innovaPucp: string;
+      valdizan: string;
     };
     fields: {
       businessAdmin: string;
@@ -84,6 +85,7 @@ interface Translations {
     trainings: {
       emergencyManagement: string;
       riskManagement: string;
+      laborLaw: string;
     };
   };
   
@@ -196,7 +198,8 @@ const translations: Record<Language, Translations> = {
         centrum: "CENTRUM Graduate Business School",
         trujillo: "Universidad Nacional de Trujillo",
         ipae: "Instituto Peruano de Administración de Empresas – IPAE",
-        innovaPucp: "INNOVA PUCP"
+        innovaPucp: "INNOVA PUCP",
+        valdizan: "Universidad Nacional Hermilio Valdizán"
       },
       fields: {
         businessAdmin: "Business Administration and Management, General",
@@ -205,7 +208,8 @@ const translations: Record<Language, Translations> = {
       },
       trainings: {
         emergencyManagement: "Emergency, Crisis and Business Continuity Management",
-        riskManagement: "Risk Management and Insurance in Safety and Health"
+        riskManagement: "Risk Management and Insurance in Safety and Health",
+        laborLaw: "Diploma in Labor Law and Legal Management of Human Resources"
       }
     },
     contact: {
@@ -312,7 +316,8 @@ const translations: Record<Language, Translations> = {
         centrum: "CENTRUM Graduate Business School",
         trujillo: "Universidad Nacional de Trujillo",
         ipae: "Instituto Peruano de Administración de Empresas – IPAE",
-        innovaPucp: "INNOVA PUCP"
+        innovaPucp: "INNOVA PUCP",
+        valdizan: "Universidad Nacional Hermilio Valdizán"
       },
       fields: {
         businessAdmin: "Administración de Empresas y Gestión, General",
@@ -321,7 +326,8 @@ const translations: Record<Language, Translations> = {
       },
       trainings: {
         emergencyManagement: "Gestión de Emergencias, Crisis y Continuidad del Negocio",
-        riskManagement: "Gestión de Riesgos y Seguros en Seguridad y Salud"
+        riskManagement: "Gestión de Riesgos y Seguros en Seguridad y Salud",
+        laborLaw: "Diplomado en Derecho Laboral y Gestión Legal de Recursos Humanos"
       }
     },
     contact: {

@@ -33,6 +33,13 @@ export default function EducationSection() {
 
   const specializedTraining = [
     {
+      title: t.education.trainings.laborLaw,
+      institution: t.education.institutions.valdizan,
+      duration: "384 Horas",
+      year: "2021",
+      icon: Award
+    },
+    {
       title: t.education.trainings.emergencyManagement,
       institution: t.education.institutions.innovaPucp,
       duration: "60 Horas",
