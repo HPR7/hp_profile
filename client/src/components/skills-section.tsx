@@ -1,36 +1,39 @@
 import { HardHat, ClipboardCheck, Leaf, AlertTriangle, Users, Bot } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function SkillsSection() {
+  const { t } = useLanguage();
+  
   const skills = [
     {
       icon: HardHat,
-      title: "Health & Safety",
-      description: "Occupational safety programs and compliance management"
+      title: t.skills.items[0].title,
+      description: t.skills.items[0].description
     },
     {
       icon: ClipboardCheck,
-      title: "Management Systems",
-      description: "ISO 9001, 14001, 45001 implementation and auditing"
+      title: t.skills.items[1].title,
+      description: t.skills.items[1].description
     },
     {
       icon: Leaf,
-      title: "Environmental Management",
-      description: "Sustainability programs and waste reduction strategies"
+      title: t.skills.items[2].title,
+      description: t.skills.items[2].description
     },
     {
       icon: AlertTriangle,
-      title: "Risk Management",
-      description: "Comprehensive risk assessment and mitigation planning"
+      title: t.skills.items[3].title,
+      description: t.skills.items[3].description
     },
     {
       icon: Users,
-      title: "Training & Development",
-      description: "Employee education and safety culture development"
+      title: t.skills.items[4].title,
+      description: t.skills.items[4].description
     },
     {
       icon: Bot,
-      title: "AI Integration",
-      description: "Using AI agents to increase productivity"
+      title: t.skills.items[5].title,
+      description: t.skills.items[5].description
     }
   ];
 
@@ -39,7 +42,7 @@ export default function SkillsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-foreground" data-testid="skills-title">
-            Core Skills & Expertise
+            {t.skills.title}
           </h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

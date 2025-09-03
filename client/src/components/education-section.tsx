@@ -1,6 +1,9 @@
 import { GraduationCap, Cog, Bot } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function EducationSection() {
+  const { t } = useLanguage();
+  
   const education = [
     {
       degree: "Master of Business Administration (M.B.A.)",
@@ -25,7 +28,7 @@ export default function EducationSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-foreground" data-testid="education-title">
-            Education & Qualifications
+            {t.education.title}
           </h2>
           
           <div className="grid lg:grid-cols-2 gap-8">
@@ -63,13 +66,13 @@ export default function EducationSection() {
           
           <div className="mt-12">
             <h3 className="text-2xl font-bold text-center mb-8 text-foreground" data-testid="certifications-title">
-              Professional Certifications
+              {t.education.certifications}
             </h3>
             <div className="bg-card rounded-xl p-8 shadow-lg print-friendly" data-testid="ai-certification">
               <div className="flex items-center justify-center">
                 <div className="bg-gradient-to-r from-primary to-secondary rounded-lg p-4 text-primary-foreground flex items-center">
                   <Bot className="text-2xl mr-3" size={24} />
-                  <span className="font-semibold">AI Agents for Productivity Enhancement</span>
+                  <span className="font-semibold">{t.education.aiCertification}</span>
                 </div>
               </div>
             </div>

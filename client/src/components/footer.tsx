@@ -1,7 +1,10 @@
 import { Mail, Phone } from "lucide-react";
 import { SiLinkedin } from "react-icons/si";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+  
   const socialLinks = [
     {
       href: "mailto:hparraga@gmail.com",
@@ -25,9 +28,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <h3 className="text-2xl font-bold mb-2" data-testid="footer-name">Hector Parraga</h3>
+            <h3 className="text-2xl font-bold mb-2" data-testid="footer-name">{t.nav.title}</h3>
             <p className="text-secondary-foreground/80" data-testid="footer-title">
-              Expert in Safety, Health & Environment Management
+              {t.footer.title}
             </p>
           </div>
           
@@ -52,7 +55,7 @@ export default function Footer() {
           
           <div className="pt-8 border-t border-secondary-foreground/20">
             <p className="text-secondary-foreground/60 text-sm" data-testid="footer-copyright">
-              © 2024 Hector Parraga. Professional Resume & Portfolio.
+              {t.footer.copyright}
             </p>
           </div>
         </div>

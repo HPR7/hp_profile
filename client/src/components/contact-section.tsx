@@ -1,29 +1,32 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { SiLinkedin } from "react-icons/si";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactSection() {
+  const { t } = useLanguage();
+  
   const contactInfo = [
     {
       icon: Phone,
-      label: "Mobile Phone",
+      label: t.contact.labels.phone,
       value: "+51 993474925",
       href: "tel:+51993474925"
     },
     {
       icon: Mail,
-      label: "Email Address",
+      label: t.contact.labels.email,
       value: "hparraga@gmail.com",
       href: "mailto:hparraga@gmail.com"
     },
     {
       icon: SiLinkedin,
-      label: "LinkedIn Profile",
+      label: t.contact.labels.linkedin,
       value: "hector-parraga-35718816",
       href: "https://linkedin.com/in/hector-parraga-35718816"
     },
     {
       icon: MapPin,
-      label: "Location",
+      label: t.contact.labels.location,
       value: "Peru",
       href: null
     }
@@ -34,14 +37,14 @@ export default function ContactSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-foreground" data-testid="contact-title">
-            Get In Touch
+            {t.contact.title}
           </h2>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
                 <h3 className="text-2xl font-bold text-card-foreground mb-6" data-testid="contact-info-title">
-                  Contact Information
+                  {t.contact.contactInfo}
                 </h3>
                 
                 <div className="space-y-6">
@@ -84,10 +87,10 @@ export default function ContactSection() {
             
             <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
               <h3 className="text-2xl font-bold text-card-foreground mb-6" data-testid="cta-title">
-                Ready to Transform Your Business?
+                {t.contact.cta.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6" data-testid="cta-description">
-                Let's discuss how my 25+ years of expertise in safety, health, and environmental management can help optimize your resources and achieve your organizational goals.
+                {t.contact.cta.description}
               </p>
               
               <div className="space-y-4">
@@ -97,7 +100,7 @@ export default function ContactSection() {
                   data-testid="button-call"
                 >
                   <Phone className="mr-2" size={16} />
-                  Call Now
+                  {t.contact.cta.callNow}
                 </a>
                 <a 
                   href="mailto:hparraga@gmail.com" 
@@ -105,7 +108,7 @@ export default function ContactSection() {
                   data-testid="button-email"
                 >
                   <Mail className="mr-2" size={16} />
-                  Send Email
+                  {t.contact.cta.sendEmail}
                 </a>
               </div>
             </div>

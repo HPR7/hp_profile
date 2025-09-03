@@ -1,4 +1,8 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 export default function ExperienceSection() {
+  const { t } = useLanguage();
+  
   const experiences = [
     {
       company: "Medifarma",
@@ -72,7 +76,7 @@ export default function ExperienceSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-foreground" data-testid="experience-title">
-            Professional Experience
+            {t.experience.title}
           </h2>
           
           <div className="relative">
@@ -106,7 +110,7 @@ export default function ExperienceSection() {
                         )}
                         <div className="bg-muted/50 rounded-lg p-4">
                           <span className="text-sm font-medium text-accent-foreground">
-                            Duration: {exp.totalDuration}
+                            {t.experience.duration}: {exp.totalDuration}
                           </span>
                         </div>
                       </div>
@@ -119,7 +123,7 @@ export default function ExperienceSection() {
                             </h3>
                           </div>
                           <span className="text-muted-foreground font-medium mt-2 lg:mt-0">
-                            Total: {exp.totalDuration}
+                            {t.experience.total}: {exp.totalDuration}
                           </span>
                         </div>
                         

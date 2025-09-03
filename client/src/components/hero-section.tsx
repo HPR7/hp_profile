@@ -1,7 +1,10 @@
 import { User, Phone } from "lucide-react";
 import { SiLinkedin } from "react-icons/si";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
+  
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -23,13 +26,13 @@ export default function HeroSection() {
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-4" data-testid="hero-name">
-              Hector Parraga
+              {t.hero.name}
             </h1>
             <p className="text-xl lg:text-2xl font-light mb-2" data-testid="hero-title">
-              Safety, Health & Environment Expert
+              {t.hero.title}
             </p>
             <p className="text-lg opacity-90" data-testid="hero-experience">
-              25+ Years of Excellence in Management Systems
+              {t.hero.experience}
             </p>
           </div>
           
@@ -40,7 +43,7 @@ export default function HeroSection() {
               data-testid="button-contact"
             >
               <Phone className="mr-2" size={16} />
-              Get In Touch
+              {t.hero.getInTouch}
             </button>
             <a 
               href="https://linkedin.com/in/hector-parraga-35718816" 
@@ -50,7 +53,7 @@ export default function HeroSection() {
               data-testid="link-linkedin"
             >
               <SiLinkedin className="mr-2" size={16} />
-              LinkedIn Profile
+              {t.hero.linkedinProfile}
             </a>
           </div>
         </div>
