@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { SiLinkedin } from "react-icons/si";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -95,11 +95,13 @@ export default function ContactSection() {
               
               <div className="space-y-4">
                 <a 
-                  href="tel:+51993474925" 
+                  href="https://wa.me/51993474925" 
                   className="w-full inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                   data-testid="button-call"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <Phone className="mr-2" size={16} />
+                  <MessageCircle className="mr-2" size={16} />
                   {t.contact.cta.callNow}
                 </a>
                 <a 

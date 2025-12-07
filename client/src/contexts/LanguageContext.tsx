@@ -260,7 +260,7 @@ const translations: Record<Language, Translations> = {
       cta: {
         title: "Ready to Transform Your Business?",
         description: "Let's discuss how my 25+ years of expertise in safety, health, and environmental management can help optimize your resources and achieve your organizational goals.",
-        callNow: "Call Now",
+        callNow: "Contact Me",
         sendEmail: "Send Email"
       }
     },
@@ -397,7 +397,7 @@ const translations: Record<Language, Translations> = {
       cta: {
         title: "¿Listo para Transformar tu Negocio?",
         description: "Discutamos cómo mis 25+ años de experiencia en gestión de seguridad, salud y medio ambiente pueden ayudar a optimizar tus recursos y lograr tus objetivos organizacionales.",
-        callNow: "Llamar Ahora",
+        callNow: "Contactame",
         sendEmail: "Enviar Email"
       }
     },
