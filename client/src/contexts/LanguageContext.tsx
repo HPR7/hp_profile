@@ -135,7 +135,7 @@ const translations: Record<Language, Translations> = {
   en: {
     nav: {
       title: "Héctor Párraga",
-      subtitle: "Safety & Environment Expert",
+      subtitle: "Safety, Health & Environment Expert",
       about: "About",
       experience: "Experience",
       education: "Education",
@@ -272,7 +272,7 @@ const translations: Record<Language, Translations> = {
   es: {
     nav: {
       title: "Héctor Párraga",
-      subtitle: "Experto en Seguridad y Medio Ambiente",
+      subtitle: "Experto en Seguridad, Salud y Medio Ambiente",
       about: "Acerca de",
       experience: "Experiencia",
       education: "Educación",
