@@ -10,7 +10,7 @@ export default function AboutSection() {
     {
       id: "coreExpertise",
       icon: Shield,
-      color: "from-primary to-secondary",
+      color: "from-primary to-primary",
       title: t.about.coreExpertise.title,
       description: t.about.coreExpertise.description,
       testid: "text-core-expertise"
@@ -18,7 +18,7 @@ export default function AboutSection() {
     {
       id: "managementSystems",
       icon: Award,
-      color: "from-blue-500 to-primary",
+      color: "from-primary to-primary",
       title: t.about.managementSystems.title,
       description: t.about.managementSystems.description,
       testid: "text-management-systems"
@@ -26,7 +26,7 @@ export default function AboutSection() {
     {
       id: "leadershipStyle",
       icon: Users,
-      color: "from-purple-500 to-primary",
+      color: "from-primary to-primary",
       title: t.about.leadershipStyle.title,
       description: t.about.leadershipStyle.description,
       testid: "text-leadership-style"
@@ -34,7 +34,7 @@ export default function AboutSection() {
     {
       id: "environmentalFocus",
       icon: Leaf,
-      color: "from-green-500 to-primary",
+      color: "from-primary to-primary",
       title: t.about.environmentalFocus.title,
       description: t.about.environmentalFocus.description,
       testid: "text-environmental-focus"
@@ -45,8 +45,8 @@ export default function AboutSection() {
   
   return (
     <section id="about" className="py-20 bg-background" data-testid="about-section">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+        <div className="max-w-2xl w-full">
           <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16 text-foreground" data-testid="about-title">
             {t.about.title}
           </h2>
