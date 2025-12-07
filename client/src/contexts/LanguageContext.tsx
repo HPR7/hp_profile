@@ -233,7 +233,8 @@ const translations: Record<Language, Translations> = {
         trujillo: "Universidad Nacional de Trujillo",
         ipae: "Instituto Peruano de Administración de Empresas – IPAE",
         innovaPucp: "INNOVA PUCP",
-        valdizan: "Universidad Nacional Hermilio Valdizán"
+        valdizan: "Universidad Nacional Hermilio Valdizán",
+        learningHeroes: "Learning Heroes"
       },
       fields: {
         businessAdmin: "Business Administration and Management, General",
@@ -243,7 +244,8 @@ const translations: Record<Language, Translations> = {
       trainings: {
         emergencyManagement: "Emergency, Crisis and Business Continuity Management",
         riskManagement: "Risk Management and Insurance in Safety and Health",
-        laborLaw: "Diploma in Labor Law and Legal Management of Human Resources"
+        laborLaw: "Diploma in Labor Law and Legal Management of Human Resources",
+        aiFormation: "Diploma in AI Training and Automation"
       }
     },
     contact: {
@@ -368,7 +370,8 @@ const translations: Record<Language, Translations> = {
         trujillo: "Universidad Nacional de Trujillo",
         ipae: "Instituto Peruano de Administración de Empresas – IPAE",
         innovaPucp: "INNOVA PUCP",
-        valdizan: "Universidad Nacional Hermilio Valdizán"
+        valdizan: "Universidad Nacional Hermilio Valdizán",
+        learningHeroes: "Learning Heroes"
       },
       fields: {
         businessAdmin: "Administración de Empresas y Gestión, General",
@@ -378,7 +381,8 @@ const translations: Record<Language, Translations> = {
       trainings: {
         emergencyManagement: "Gestión de Emergencias, Crisis y Continuidad del Negocio",
         riskManagement: "Gestión de Riesgos y Seguros en Seguridad y Salud",
-        laborLaw: "Diplomado en Derecho Laboral y Gestión Legal de Recursos Humanos"
+        laborLaw: "Diplomado en Derecho Laboral y Gestión Legal de Recursos Humanos",
+        aiFormation: "Diploma en Formación en Inteligencia Artificial y Automatizaciones"
       }
     },
     contact: {
