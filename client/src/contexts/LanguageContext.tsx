@@ -348,8 +348,8 @@ const translations: Record<Language, Translations> = {
         cosapi: "COSAPI S.A. / Sandwell SSK S.A. / Sagitario S.A. / GyM S.A."
       },
       positions: {
-        deputyManagerEnvironment: "Gerente Adjunto de Ambiente, Salud y Seguridad",
-        deputyManagerSafety: "Gerente Adjunto de Seguridad y Salud Ocupacional",
+        deputyManagerEnvironment: "Sub Gerente de Seguridad, Salud Ocupacional y Medio Ambiente",
+        deputyManagerSafety: "Sub Gerente de Seguridad y Salud Ocupacional",
         headSafety: "Jefe de Seguridad y Salud en el Trabajo",
         industrialSupervisor: "Supervisor de Seguridad Industrial",
         safetyEngineer: "Ingeniero de Seguridad"
