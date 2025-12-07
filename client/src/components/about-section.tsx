@@ -1,8 +1,41 @@
+import { useState } from "react";
 import { Shield, Award, Users, Leaf } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AboutSection() {
   const { t } = useLanguage();
+  const [expandedSection, setExpandedSection] = useState("coreExpertise");
+  
+  const sections = [
+    {
+      id: "coreExpertise",
+      icon: Shield,
+      title: t.about.coreExpertise.title,
+      description: t.about.coreExpertise.description,
+      testid: "text-core-expertise"
+    },
+    {
+      id: "managementSystems",
+      icon: Award,
+      title: t.about.managementSystems.title,
+      description: t.about.managementSystems.description,
+      testid: "text-management-systems"
+    },
+    {
+      id: "leadershipStyle",
+      icon: Users,
+      title: t.about.leadershipStyle.title,
+      description: t.about.leadershipStyle.description,
+      testid: "text-leadership-style"
+    },
+    {
+      id: "environmentalFocus",
+      icon: Leaf,
+      title: t.about.environmentalFocus.title,
+      description: t.about.environmentalFocus.description,
+      testid: "text-environmental-focus"
+    }
+  ];
   
   return (
     <section id="about" className="py-20 bg-background" data-testid="about-section">
@@ -12,50 +45,32 @@ export default function AboutSection() {
             {t.about.title}
           </h2>
           
-          <div className="space-y-8">
-            {/* Primera fila: Core Expertise */}
-            <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-              <h3 className="text-xl font-semibold text-primary mb-4">
-                <Shield className="mr-2 inline" size={20} />
-                {t.about.coreExpertise.title}
-              </h3>
-              <p className="text-card-foreground leading-relaxed" data-testid="text-core-expertise">
-                {t.about.coreExpertise.description}
-              </p>
-            </div>
-            
-            {/* Segunda fila: Management Systems */}
-            <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-              <h3 className="text-xl font-semibold text-primary mb-4">
-                <Award className="mr-2 inline" size={20} />
-                {t.about.managementSystems.title}
-              </h3>
-              <p className="text-card-foreground leading-relaxed" data-testid="text-management-systems">
-                {t.about.managementSystems.description}
-              </p>
-            </div>
-            
-            {/* Tercera fila: Leadership Style */}
-            <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-              <h3 className="text-xl font-semibold text-primary mb-4">
-                <Users className="mr-2 inline" size={20} />
-                {t.about.leadershipStyle.title}
-              </h3>
-              <p className="text-card-foreground leading-relaxed" data-testid="text-leadership-style">
-                {t.about.leadershipStyle.description}
-              </p>
-            </div>
-            
-            {/* Cuarta fila: Environmental Focus */}
-            <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-              <h3 className="text-xl font-semibold text-primary mb-4">
-                <Leaf className="mr-2 inline" size={20} />
-                {t.about.environmentalFocus.title}
-              </h3>
-              <p className="text-card-foreground leading-relaxed" data-testid="text-environmental-focus">
-                {t.about.environmentalFocus.description}
-              </p>
-            </div>
+          <div className="space-y-4">
+            {sections.map((section) => {
+              const IconComponent = section.icon;
+              const isExpanded = expandedSection === section.id;
+              
+              return (
+                <div 
+                  key={section.id}
+                  onMouseEnter={() => setExpandedSection(section.id)}
+                  onMouseLeave={() => setExpandedSection("coreExpertise")}
+                  className="bg-card rounded-xl shadow-lg print-friendly transition-all duration-300 cursor-pointer hover:shadow-xl"
+                >
+                  <div className="p-8">
+                    <h3 className="text-xl font-semibold text-primary mb-4 flex items-center">
+                      <IconComponent className="mr-2" size={20} />
+                      {section.title}
+                    </h3>
+                    {isExpanded && (
+                      <p className="text-card-foreground leading-relaxed animate-in fade-in duration-300" data-testid={section.testid}>
+                        {section.description}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
