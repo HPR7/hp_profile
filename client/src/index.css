@@ -36,6 +36,10 @@
   --sidebar-accent-foreground: hsl(203.8863, 88.2845%, 53.1373%);
   --sidebar-border: hsl(205.0000, 25.0000%, 90.5882%);
   --sidebar-ring: hsl(202.8169, 89.1213%, 53.1373%);
+  --gradient-start: hsl(158, 100%, 12%);
+  --gradient-level-1: hsl(158, 96%, 20%);
+  --gradient-level-2: hsl(158, 80%, 36%);
+  --gradient-end: hsl(158, 64%, 52%);
   --font-sans: 'Inter', 'Open Sans', sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;

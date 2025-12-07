@@ -44,6 +44,10 @@ export default {
         border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
+        "gradient-start": "var(--gradient-start)",
+        "gradient-level-1": "var(--gradient-level-1)",
+        "gradient-level-2": "var(--gradient-level-2)",
+        "gradient-end": "var(--gradient-end)",
         chart: {
           "1": "var(--chart-1)",
           "2": "var(--chart-2)",

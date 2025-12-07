@@ -10,7 +10,7 @@ export default function AboutSection() {
     {
       id: "coreExpertise",
       icon: Shield,
-      color: "from-secondary to-primary",
+      color: "bg-gradient-start",
       title: t.about.coreExpertise.title,
       description: t.about.coreExpertise.description,
       testid: "text-core-expertise"
@@ -18,7 +18,7 @@ export default function AboutSection() {
     {
       id: "managementSystems",
       icon: Award,
-      color: "from-teal-600 to-teal-500",
+      color: "bg-gradient-level-1",
       title: t.about.managementSystems.title,
       description: t.about.managementSystems.description,
       testid: "text-management-systems"
@@ -26,7 +26,7 @@ export default function AboutSection() {
     {
       id: "leadershipStyle",
       icon: Users,
-      color: "from-teal-500 to-teal-400",
+      color: "bg-gradient-level-2",
       title: t.about.leadershipStyle.title,
       description: t.about.leadershipStyle.description,
       testid: "text-leadership-style"
@@ -34,7 +34,7 @@ export default function AboutSection() {
     {
       id: "environmentalFocus",
       icon: Leaf,
-      color: "from-teal-400 to-teal-300",
+      color: "bg-gradient-end",
       title: t.about.environmentalFocus.title,
       description: t.about.environmentalFocus.description,
       testid: "text-environmental-focus"
@@ -71,7 +71,7 @@ export default function AboutSection() {
                     data-testid={`about-section-${section.id}`}
                   >
                     {/* Gradient Background */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${section.color} opacity-${isSelected ? '100' : '80'} group-hover:opacity-90 transition-opacity duration-500`}></div>
+                    <div className={`absolute inset-0 ${section.color} opacity-${isSelected ? '100' : '80'} group-hover:opacity-90 transition-opacity duration-500`}></div>
                     
                     {/* Content */}
                     <div className="relative p-6 text-white flex flex-col items-center justify-center min-h-[200px]">
@@ -94,7 +94,7 @@ export default function AboutSection() {
             {currentSection && (
               <div className="bg-gradient-to-br from-card to-card/80 rounded-2xl shadow-2xl overflow-hidden border border-primary/10">
                 {/* Header */}
-                <div className={`bg-gradient-to-r ${currentSection.color} p-8 md:p-10`}>
+                <div className={`${currentSection.color} p-8 md:p-10`}>
                   <div className="flex items-center gap-4">
                     {(() => {
                       const Icon = currentSection.icon;
