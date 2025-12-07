@@ -6,59 +6,59 @@ export default function ExperienceSection() {
   
   const experiences = [
     {
-      company: "Medifarma",
-      position: "Deputy Manager of Environment, Health and Safety",
+      companyKey: "medifarma",
+      positionKey: "deputyManagerEnvironment",
       location: "Lima Province, Peru",
       startYear: "2019",
       type: "single"
     },
     {
-      company: "San Miguel Industrias PET S.A.",
-      position: "Deputy Manager of Safety and Health Occupational",
+      companyKey: "sanMiguel",
+      positionKey: "deputyManagerSafety",
       location: "Peru, Colombia, Ecuador, El Salvador, Mexico, Panama, Guatemala, Argentina, Chile",
       startYear: "2014",
       type: "single"
     },
     {
-      company: "San Fernando",
-      position: "Head of Safety and Health at Work",
+      companyKey: "sanFernando",
+      positionKey: "headSafety",
       location: "Lima Province, Peru",
       startYear: "2012",
       type: "single"
     },
     {
-      company: "Backus",
-      position: "Industrial Safety Supervisor",
+      companyKey: "backus",
+      positionKey: "industrialSupervisor",
       location: "Lima Province, Peru",
       startYear: "2010",
       type: "single"
     },
     {
-      company: "Compañía Nacional de Chocolates de Peru SA",
-      position: "Head of Industrial Safety",
+      companyKey: "chocolate",
+      positionKey: "headSafety",
       location: "Lima Province, Peru",
       startYear: "2007",
       type: "single"
     },
     {
-      company: "MAPFRE PERÚ",
-      position: "Safety Engineer",
+      companyKey: "mapfre",
+      positionKey: "safetyEngineer",
       location: "Lima Province, Peru",
       startYear: "2006",
       type: "single",
       isEarly: true
     },
     {
-      company: "Rimac Internacional S.A. EPS",
-      position: "Safety Engineer",
+      companyKey: "rimac",
+      positionKey: "safetyEngineer",
       location: "Lima Province, Peru",
       startYear: "2001",
       type: "single",
       isEarly: true
     },
     {
-      company: "COSAPI S.A. / Sandwell SSK S.A. / Sagitario S.A. / GyM S.A.",
-      position: "Safety Engineer",
+      companyKey: "cosapi",
+      positionKey: "safetyEngineer",
       location: "Lima Province, Peru",
       startYear: "1998",
       type: "single",
@@ -124,10 +124,10 @@ export default function ExperienceSection() {
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                 <div>
                   <h3 className="text-2xl font-bold text-card-foreground mb-2" data-testid="selected-position">
-                    {selectedExperience.position}
+                    {t.experience.positions[selectedExperience.positionKey as keyof typeof t.experience.positions]}
                   </h3>
                   <h4 className="text-xl font-semibold text-primary mb-2" data-testid="selected-company">
-                    {selectedExperience.company}
+                    {t.experience.companies[selectedExperience.companyKey as keyof typeof t.experience.companies]}
                   </h4>
                 </div>
                 <span className="text-primary font-bold text-xl bg-primary/10 px-4 py-2 rounded-lg" data-testid="selected-year">

@@ -57,6 +57,23 @@ interface Translations {
     title: string;
     duration: string;
     total: string;
+    companies: {
+      medifarma: string;
+      sanMiguel: string;
+      sanFernando: string;
+      backus: string;
+      chocolate: string;
+      mapfre: string;
+      rimac: string;
+      cosapi: string;
+    };
+    positions: {
+      deputyManagerEnvironment: string;
+      deputyManagerSafety: string;
+      headSafety: string;
+      industrialSupervisor: string;
+      safetyEngineer: string;
+    };
   };
   
   // Education Section
@@ -182,7 +199,24 @@ const translations: Record<Language, Translations> = {
     experience: {
       title: "Professional Experience",
       duration: "Duration",
-      total: "Total"
+      total: "Total",
+      companies: {
+        medifarma: "Medifarma",
+        sanMiguel: "San Miguel Industrias PET S.A.",
+        sanFernando: "San Fernando",
+        backus: "Backus",
+        chocolate: "Compañía Nacional de Chocolates de Peru SA",
+        mapfre: "MAPFRE PERÚ",
+        rimac: "Rimac Internacional S.A. EPS",
+        cosapi: "COSAPI S.A. / Sandwell SSK S.A. / Sagitario S.A. / GyM S.A."
+      },
+      positions: {
+        deputyManagerEnvironment: "Deputy Manager of Environment, Health and Safety",
+        deputyManagerSafety: "Deputy Manager of Safety and Health Occupational",
+        headSafety: "Head of Safety and Health at Work",
+        industrialSupervisor: "Industrial Safety Supervisor",
+        safetyEngineer: "Safety Engineer"
+      }
     },
     education: {
       title: "Education & Qualifications",
@@ -300,7 +334,24 @@ const translations: Record<Language, Translations> = {
     experience: {
       title: "Experiencia Profesional",
       duration: "Duración",
-      total: "Total"
+      total: "Total",
+      companies: {
+        medifarma: "Medifarma",
+        sanMiguel: "San Miguel Industrias PET S.A.",
+        sanFernando: "San Fernando",
+        backus: "Backus",
+        chocolate: "Compañía Nacional de Chocolates de Peru SA",
+        mapfre: "MAPFRE PERÚ",
+        rimac: "Rimac Internacional S.A. EPS",
+        cosapi: "COSAPI S.A. / Sandwell SSK S.A. / Sagitario S.A. / GyM S.A."
+      },
+      positions: {
+        deputyManagerEnvironment: "Gerente Adjunto de Ambiente, Salud y Seguridad",
+        deputyManagerSafety: "Gerente Adjunto de Seguridad y Salud Ocupacional",
+        headSafety: "Jefe de Seguridad y Salud en el Trabajo",
+        industrialSupervisor: "Supervisor de Seguridad Industrial",
+        safetyEngineer: "Ingeniero de Seguridad"
+      }
     },
     education: {
       title: "Educación y Calificaciones",
