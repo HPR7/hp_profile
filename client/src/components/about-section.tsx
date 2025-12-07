@@ -10,7 +10,7 @@ export default function AboutSection() {
     {
       id: "coreExpertise",
       icon: Shield,
-      color: "from-primary to-primary",
+      color: "from-secondary to-primary",
       title: t.about.coreExpertise.title,
       description: t.about.coreExpertise.description,
       testid: "text-core-expertise"
@@ -18,7 +18,7 @@ export default function AboutSection() {
     {
       id: "managementSystems",
       icon: Award,
-      color: "from-primary to-primary",
+      color: "from-primary to-emerald-400",
       title: t.about.managementSystems.title,
       description: t.about.managementSystems.description,
       testid: "text-management-systems"
@@ -26,7 +26,7 @@ export default function AboutSection() {
     {
       id: "leadershipStyle",
       icon: Users,
-      color: "from-primary to-primary",
+      color: "from-emerald-400 to-teal-300",
       title: t.about.leadershipStyle.title,
       description: t.about.leadershipStyle.description,
       testid: "text-leadership-style"
@@ -34,7 +34,7 @@ export default function AboutSection() {
     {
       id: "environmentalFocus",
       icon: Leaf,
-      color: "from-primary to-primary",
+      color: "from-teal-300 to-cyan-200",
       title: t.about.environmentalFocus.title,
       description: t.about.environmentalFocus.description,
       testid: "text-environmental-focus"
