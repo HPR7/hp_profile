@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack web application built with React and Express.js that appears to be a professional portfolio website for Hector Parraga, a Safety, Health & Environment expert. The application features a modern, responsive design with multiple sections including hero, about, skills, experience, education, and contact information. The project uses a monorepo structure with shared TypeScript schemas and is configured for both development and production deployment.
+This is a full-stack web application built with React and Express.js that appears to be a professional portfolio website for Héctor Párraga, a Safety, Health & Environment expert. The application features a modern, responsive design with multiple sections including hero, about, skills, experience, education, and contact information. The project uses a monorepo structure with shared TypeScript schemas and is configured for both development and production deployment.
 
 ## User Preferences
 

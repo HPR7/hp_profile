@@ -134,7 +134,7 @@ interface Translations {
 const translations: Record<Language, Translations> = {
   en: {
     nav: {
-      title: "Hector Parraga",
+      title: "Héctor Párraga",
       subtitle: "Safety & Environment Expert",
       about: "About",
       experience: "Experience",
@@ -142,7 +142,7 @@ const translations: Record<Language, Translations> = {
       contact: "Contact"
     },
     hero: {
-      name: "Hector Parraga",
+      name: "Héctor Párraga",
       title: "Safety, Health & Environment Expert",
       experience: "25+ Years of Excellence in Management Systems",
       getInTouch: "Get In Touch",
@@ -266,12 +266,12 @@ const translations: Record<Language, Translations> = {
     },
     footer: {
       title: "Expert in Safety, Health & Environment Management",
-      copyright: "© 2025 Hector Parraga. Professional Resume & Portfolio."
+      copyright: "© 2025 Héctor Párraga. Professional Resume & Portfolio."
     }
   },
   es: {
     nav: {
-      title: "Hector Parraga",
+      title: "Héctor Párraga",
       subtitle: "Experto en Seguridad y Medio Ambiente",
       about: "Acerca de",
       experience: "Experiencia",
@@ -279,7 +279,7 @@ const translations: Record<Language, Translations> = {
       contact: "Contacto"
     },
     hero: {
-      name: "Hector Parraga",
+      name: "Héctor Párraga",
       title: "Experto en Seguridad, Salud y Medio Ambiente",
       experience: "25+ Años de Excelencia en Sistemas de Gestión",
       getInTouch: "Ponte en Contacto",
@@ -403,7 +403,7 @@ const translations: Record<Language, Translations> = {
     },
     footer: {
       title: "Experto en Gestión de Seguridad, Salud y Medio Ambiente",
-      copyright: "© 2025 Hector Parraga. Currículum y Portafolio Profesional."
+      copyright: "© 2025 Héctor Párraga. Currículum y Portafolio Profesional."
     }
   }
 };
