@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AboutSection() {
   const { t } = useLanguage();
-  const [expandedSection, setExpandedSection] = useState("coreExpertise");
+  const [selectedSection, setSelectedSection] = useState("coreExpertise");
   
   const sections = [
     {
@@ -37,6 +37,8 @@ export default function AboutSection() {
     }
   ];
   
+  const currentSection = sections.find(s => s.id === selectedSection);
+  
   return (
     <section id="about" className="py-20 bg-background" data-testid="about-section">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,33 +47,40 @@ export default function AboutSection() {
             {t.about.title}
           </h2>
           
-          <div className="grid lg:grid-cols-2 gap-6">
-            {sections.map((section) => {
-              const IconComponent = section.icon;
-              const isExpanded = expandedSection === section.id;
-              
-              return (
-                <div 
-                  key={section.id}
-                  onMouseEnter={() => setExpandedSection(section.id)}
-                  onMouseLeave={() => setExpandedSection("coreExpertise")}
-                  onClick={() => setExpandedSection(section.id)}
-                  className="bg-card rounded-xl shadow-lg print-friendly transition-all duration-300 cursor-pointer hover:shadow-xl min-h-[200px] flex flex-col"
-                >
-                  <div className="p-6 flex flex-col h-full">
-                    <h3 className="text-lg font-semibold text-primary mb-4 flex items-center flex-shrink-0">
-                      <IconComponent className="mr-2" size={20} />
-                      {section.title}
-                    </h3>
-                    {isExpanded && (
-                      <p className="text-card-foreground leading-relaxed animate-in fade-in duration-300 text-sm flex-grow" data-testid={section.testid}>
-                        {section.description}
-                      </p>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
+          <div className="bg-card rounded-xl shadow-lg print-friendly">
+            {/* Titles as bullets */}
+            <div className="flex flex-wrap gap-4 p-8 border-b border-muted">
+              {sections.map((section) => {
+                const IconComponent = section.icon;
+                const isSelected = selectedSection === section.id;
+                
+                return (
+                  <button
+                    key={section.id}
+                    onMouseEnter={() => setSelectedSection(section.id)}
+                    onClick={() => setSelectedSection(section.id)}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                      isSelected
+                        ? "bg-primary text-primary-foreground font-semibold"
+                        : "bg-muted text-muted-foreground hover:bg-muted/80"
+                    }`}
+                    data-testid={`about-section-${section.id}`}
+                  >
+                    <IconComponent size={18} />
+                    <span>{section.title}</span>
+                  </button>
+                );
+              })}
+            </div>
+            
+            {/* Content area */}
+            <div className="p-8 min-h-[300px] flex items-center">
+              {currentSection && (
+                <p className="text-card-foreground leading-relaxed animate-in fade-in duration-300" data-testid={currentSection.testid}>
+                  {currentSection.description}
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
