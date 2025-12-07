@@ -18,7 +18,7 @@ export default function AboutSection() {
     {
       id: "managementSystems",
       icon: Award,
-      color: "from-primary to-emerald-400",
+      color: "from-teal-600 to-teal-500",
       title: t.about.managementSystems.title,
       description: t.about.managementSystems.description,
       testid: "text-management-systems"
@@ -26,7 +26,7 @@ export default function AboutSection() {
     {
       id: "leadershipStyle",
       icon: Users,
-      color: "from-emerald-400 to-teal-300",
+      color: "from-teal-500 to-teal-400",
       title: t.about.leadershipStyle.title,
       description: t.about.leadershipStyle.description,
       testid: "text-leadership-style"
@@ -34,7 +34,7 @@ export default function AboutSection() {
     {
       id: "environmentalFocus",
       icon: Leaf,
-      color: "from-teal-300 to-cyan-200",
+      color: "from-teal-400 to-teal-300",
       title: t.about.environmentalFocus.title,
       description: t.about.environmentalFocus.description,
       testid: "text-environmental-focus"
