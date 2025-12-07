@@ -45,7 +45,7 @@ export default function AboutSection() {
             {t.about.title}
           </h2>
           
-          <div className="space-y-4">
+          <div className="grid lg:grid-cols-2 gap-6">
             {sections.map((section) => {
               const IconComponent = section.icon;
               const isExpanded = expandedSection === section.id;
@@ -55,15 +55,16 @@ export default function AboutSection() {
                   key={section.id}
                   onMouseEnter={() => setExpandedSection(section.id)}
                   onMouseLeave={() => setExpandedSection("coreExpertise")}
-                  className="bg-card rounded-xl shadow-lg print-friendly transition-all duration-300 cursor-pointer hover:shadow-xl"
+                  onClick={() => setExpandedSection(section.id)}
+                  className="bg-card rounded-xl shadow-lg print-friendly transition-all duration-300 cursor-pointer hover:shadow-xl min-h-[200px] flex flex-col"
                 >
-                  <div className="p-8">
-                    <h3 className="text-xl font-semibold text-primary mb-4 flex items-center">
+                  <div className="p-6 flex flex-col h-full">
+                    <h3 className="text-lg font-semibold text-primary mb-4 flex items-center flex-shrink-0">
                       <IconComponent className="mr-2" size={20} />
                       {section.title}
                     </h3>
                     {isExpanded && (
-                      <p className="text-card-foreground leading-relaxed animate-in fade-in duration-300" data-testid={section.testid}>
+                      <p className="text-card-foreground leading-relaxed animate-in fade-in duration-300 text-sm flex-grow" data-testid={section.testid}>
                         {section.description}
                       </p>
                     )}
