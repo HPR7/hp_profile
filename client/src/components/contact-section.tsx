@@ -40,24 +40,24 @@ export default function ContactSection() {
             {t.contact.title}
           </h2>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-                <h3 className="text-2xl font-bold text-card-foreground mb-6" data-testid="contact-info-title">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            <div className="space-y-6 md:space-y-8">
+              <div className="bg-card rounded-xl p-6 md:p-8 shadow-lg print-friendly">
+                <h3 className="text-xl md:text-2xl font-bold text-card-foreground mb-6" data-testid="contact-info-title">
                   {t.contact.contactInfo}
                 </h3>
                 
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6">
                   {contactInfo.map((contact, index) => {
                     const IconComponent = contact.icon;
                     const content = (
-                      <div className="flex items-center" key={index}>
-                        <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
-                          <IconComponent className="text-primary-foreground" size={20} />
+                      <div className="flex items-start md:items-center gap-3 md:gap-4" key={index}>
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="text-primary-foreground" size={18} />
                         </div>
-                        <div>
-                          <p className="text-muted-foreground text-sm">{contact.label}</p>
-                          <span className="text-lg font-semibold text-card-foreground">
+                        <div className="min-w-0">
+                          <p className="text-muted-foreground text-xs md:text-sm">{contact.label}</p>
+                          <span className="text-sm md:text-lg font-semibold text-card-foreground break-words">
                             {contact.value}
                           </span>
                         </div>
@@ -85,18 +85,18 @@ export default function ContactSection() {
               </div>
             </div>
             
-            <div className="bg-card rounded-xl p-8 shadow-lg print-friendly">
-              <h3 className="text-2xl font-bold text-card-foreground mb-6" data-testid="cta-title">
+            <div className="bg-card rounded-xl p-6 md:p-8 shadow-lg print-friendly">
+              <h3 className="text-xl md:text-2xl font-bold text-card-foreground mb-4 md:mb-6" data-testid="cta-title">
                 {t.contact.cta.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6" data-testid="cta-description">
+              <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base" data-testid="cta-description">
                 {t.contact.cta.description}
               </p>
               
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <a 
                   href="https://wa.me/51993474925" 
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
+                  className="w-full inline-flex items-center justify-center px-4 md:px-6 py-2 md:py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors text-sm md:text-base"
                   data-testid="button-call"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -106,7 +106,7 @@ export default function ContactSection() {
                 </a>
                 <a 
                   href="mailto:hparraga@gmail.com" 
-                  className="w-full inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors"
+                  className="w-full inline-flex items-center justify-center px-4 md:px-6 py-2 md:py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/10 transition-colors text-sm md:text-base"
                   data-testid="button-email"
                 >
                   <Mail className="mr-2" size={16} />
